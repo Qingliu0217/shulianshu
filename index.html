@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>书连书｜发现一本书里的另一些书</title>
+  <meta name="description" content="输入中文书名，发现书中提到、引用或致敬的作品，并前往豆瓣图书继续探索。">
+  <meta property="og:title" content="书连书｜发现一本书里的另一些书">
+  <meta property="og:description" content="从一本书，走进一座图书馆。">
+  <meta property="og:image" content="./og.png">
+  <link rel="icon" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<main>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="书连书首页"><span class="brand-mark">书</span><span>书连书</span></a>
+    <span class="edition">中文图书关联索引 · 预览版</span>
+  </header>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">从一本书，走进一座图书馆</p>
+      <h1>你读的书里，<br><em>还藏着哪些书？</em></h1>
+      <p class="lead">输入中文书名，发现书中提到、引用或致敬的作品，顺着作者留下的线索继续阅读。</p>
+    </div>
+    <div class="search-panel">
+      <form id="search-form" class="search-form">
+        <label for="book-search">输入一本中文书名</label>
+        <div class="input-row">
+          <input id="book-search" placeholder="例如：如何阅读一本书" autocomplete="off">
+          <button type="submit">查找书中之书 <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+      <div class="examples"><span>试试：</span><button data-example="如何阅读一本书">如何阅读一本书</button><button data-example="人类简史">人类简史</button><button data-example="月亮与六便士">月亮与六便士</button></div>
+    </div>
+    <div class="book-stack" aria-hidden="true"><span class="book b1"></span><span class="book b2"></span><span class="book b3"></span><span class="book b4"></span><span class="book b5"></span></div>
+  </section>
+  <section id="results" class="results" aria-live="polite" hidden></section>
+  <section id="how" class="how">
+    <p class="kicker">如何使用</p>
+    <div class="steps"><div><b>01</b><h3>输入书名</h3><p>支持书名号与模糊匹配</p></div><div><b>02</b><h3>查看脉络</h3><p>了解每本书为何被提及</p></div><div><b>03</b><h3>继续阅读</h3><p>点击跳转豆瓣图书查找版本</p></div></div>
+  </section>
+  <footer><span>书连书 · 让每一次阅读都有下一站</span><span>数据仍在持续整理中</span></footer>
+</main>
+<script src="./app.js"></script>
+</body>
+</html>
