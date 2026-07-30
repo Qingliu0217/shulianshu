@@ -11,7 +11,7 @@ function parseJson(content) {
   );
 }
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "仅支持 POST 请求" });
   if (!process.env.DEEPSEEK_API_KEY) {
     return res.status(503).json({ error: "服务尚未配置 DeepSeek API 密钥" });
