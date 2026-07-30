@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>书连书｜发现一本书里的另一些书</title>
-  <meta name="description" content="输入中文书名，由 AI 实时整理书中提到、引用或致敬的作品，并提供豆瓣图书链接。">
+  <meta name="description" content="输入中文书名或上传自己的电子书，发现书中明确提到的其他作品。">
   <meta property="og:title" content="书连书｜发现一本书里的另一些书">
   <meta property="og:description" content="从一本书，走进一座图书馆。">
   <meta property="og:image" content="./og.png">
@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./type-tuning.css">
   <link rel="stylesheet" href="./meta-separator.css">
+  <link rel="stylesheet" href="./upload-analysis.css">
 </head>
 <body>
 <main>
@@ -23,7 +24,7 @@
     <div class="hero-copy">
       <p class="eyebrow">从一本书，走进一座图书馆</p>
       <h1>你读的书里，<br><em>还藏着哪些书？</em></h1>
-      <p class="lead">输入中文书名，实时发现书中提到、引用或致敬的作品，顺着作者留下的线索继续阅读。</p>
+      <p class="lead">输入中文书名，实时发现书中提到、引用或致敬的作品；也可以上传自己的电子书，基于原文获得更可靠的结果。</p>
     </div>
     <div class="search-panel">
       <form id="search-form" class="search-form">
@@ -41,14 +42,16 @@
   <section id="how" class="how">
     <p class="kicker">如何使用</p>
     <div class="steps">
-      <div><b>01</b><h3>输入书名</h3><p>支持任意中文书名</p></div>
-      <div><b>02</b><h3>AI 实时整理</h3><p>通常返回 10—20 条线索</p></div>
+      <div><b>01</b><h3>输入书名</h3><p>快速获得公开知识线索</p></div>
+      <div><b>02</b><h3>上传原文</h3><p>仅提取有原文证据的书名</p></div>
       <div><b>03</b><h3>继续阅读</h3><p>点击跳转豆瓣图书查找版本</p></div>
     </div>
   </section>
-  <footer><span>书连书 · 让每一次阅读都有下一站</span><span>AI 结果请结合原书复核</span></footer>
+  <footer><span>书连书 · 让每一次阅读都有下一站</span><span>文件不保存 · AI 结果请结合原书复核</span></footer>
 </main>
+<script src="./vendor/jszip.min.js"></script>
 <script src="./app.js"></script>
 <script src="./meta-separator.js"></script>
+<script src="./upload-analysis.js"></script>
 </body>
 </html>
